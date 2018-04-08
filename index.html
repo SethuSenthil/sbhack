@@ -54,7 +54,7 @@ transition: width 2s, height 4s;
 
 <body>
   <nav class="navbar navbar-dark primary-color">
-      <a class="navbar-brand" href="#" style = "text-align: center;">The Impossible Game</a>
+      <a class="navbar-brand" href="#" style = "text-align: center;">The !mpossible Game</a>
       <span id="nopad">
       <img src="https://serviceondial.com/assets/user/profile/unknow.png" alt="ayyyyy" id="profile">
       <span id="username"></span>
@@ -107,7 +107,7 @@ transition: width 2s, height 4s;
   <div id = "wd" class="card  wow slideInLeft" data-wow-delay="1.9s">
       <div class="card-body">
         <h4>  Level 5: </h4>
-<p><span id="copy">hover</span> over the mistake on this card.</p>
+<p><span id="copy" onmouseover="onghb()">hover</span> over the mistake on this card.</p>
 
       </div>
   </div>
@@ -223,11 +223,9 @@ var wow = new WOW(
     scrollContainer: null // optional scroll container selector, otherwise use window
   }
 );
-wow.init();
- document.getElementById('scoreDis').innerText = 'Score:' + score;
- document.getElementById('copy').addEventListener = ('onmouseover', function() {
-alert('grammer god')
- })
+ function onghbr() {
+alert('grammer god');
+}
 
  document.getElementById('bigScore').innerText = 'Your Score Is: ' + biggerScore/1 * 100;
 
