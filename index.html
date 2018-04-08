@@ -3,24 +3,248 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css?family=Product+Sans:400,400i,700,700i" rel=stylesheet>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+ <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/css/mdb.min.css" rel="stylesheet">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+ <meta name="google-signin-client_id" content="128879950884-embr1ecv7uta9cthnan7bplv929i3ljk.apps.googleusercontent.com">
+ <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <title>The !mpossible Quiz Game</title>
 <style>
+*{
+  font-family: 'Product Sans' !important;
+}
+.navbar-brand{
+font-size: 25px !important;
+}
+#profile{
+  width: 50px;
+  height: 50px;
+  border-radius: 30px;
+  padding: 10px;
+
+}
+#nopad{
+  padding:  !important;
+}
+#nopad:hover{
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  padding-right: 5px;
+  -webkit-transition: width 2s, height 4s;
+transition: width 2s, height 4s;
+
+}
+#username{
+  color: white;
+}
+.hide{
+  display: none;
+  visibility: hidden;
+}
+#buttonm{
+  position: absolute;
+  color: blue;
+}
 
 </style>
-
-
-
-
-
-
-
 </head>
-<body>
 
-  <h1></h1>
+<body>
+  <nav class="navbar navbar-dark primary-color">
+      <a class="navbar-brand" href="#" style = "text-align: center;">The Impossible Game</a>
+      <span id="nopad">
+      <img src="https://serviceondial.com/assets/user/profile/unknow.png" alt="ayyyyy" id="profile">
+      <span id="username"></span>
+</span>
+  </nav>
+
+
+  <br>
+<div class="container">
+<!-- Level 1 -->
+  <div class="card  wow slideInLeft" id="que" >
+      <div class="card-body">
+        <h4>Level 1:</h4>
+<p>Log in using your Google account</p>
+<div class="g-signin2" data-onsuccess="onSignIn"></div>
+<br>
+      </div>
+  </div>
+<br>
+  <div class="card wow slideInLeft" data-wow-delay="1s">
+      <div class="card-body">
+      <h4>  Level 2: </h4>
+        <p>Click on the <span id="thing">button</span> two times</p>
+        <button type="button" name="button" id="wrongbutton">Click here</button>
+      </div>
+  </div>
+  <br>
+  <div class="card wow slideInLeft" data-wow-delay="1.5s">
+      <div class="card-body">
+      <h4>  Level 3: </h4>
+        <p>Whats your Name? Spell it!</p>
+        <input type="text" value="" id="name">
+        <button type="button" name="button" id="namesub">Submit</button>
+      </div>
+  </div>
+  <br>
+  <div id = "wd" class="card  wow slideInLeft" data-wow-delay="1.7s">
+      <div class="card-body">
+      <h4>  Level 4: </h4>
+        <p>Score above 10</p>
+        <p>Click on the blue dot to get 5 points</p>
+        <p id="scoreDis"> </p>
+        <div class="canvassss">
+          <i class="fas fa-circle" onmouseover="move()" id="buttonm" onclick="scoreadd"></i>
+        </div>
+      </div>
+  </div>
+  <br>
+
+  <div id = "wd" class="card  wow slideInLeft" data-wow-delay="1.9s">
+      <div class="card-body">
+        <h4>  Level 5: </h4>
+<p><span id="copy">hover</span> over the mistake on this card.</p>
+
+      </div>
+  </div>
+
+  <br>
+  <div id="bigScore">
+</div>
+</div>
 
 </body>
-<script type="text/javascript">
+<!--Footer-->
+<footer class="page-footer font-small blue pt-4 mt-4">
 
+    <!--Footer Links-->
+    <div class="container-fluid text-center text-md-left">
+        <div class="row">
+
+            <!--First column-->
+            <div class="col-md-6">
+                <h5 class="text-uppercase">!mpossible game</h5>
+                <p>I love this font</p>
+            </div>
+            <!--/.First column-->
+
+            <!--Second column-->
+            <div class="col-md-6">
+                <h5 class="text-uppercase">By:</h5>
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="https://sethusenthil.github.io">Sethu</a>
+                    </li>
+                    <li>
+                        <a href="#!">Vivek</a>
+                    </li>
+                    <li>
+                        <a href="#!">Viresh</a>
+                    </li>
+                    <li>
+                        <a href="#!">Dhanush</a>
+                    </li>
+                </ul>
+            </div>
+            <!--/.Second column-->
+        </div>
+    </div>
+    <!--/.Footer Links-->
+
+    <!--Copyright-->
+    <div class="footer-copyright py-3 text-center">
+        © 2018 Copyright:
+        <a href="https://sethusenthil.github.io"> Sethu Senthil </a>
+    </div>
+    <!--/.Copyright-->
+
+</footer>
+<!--/.Footer-->
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/js/mdb.min.js"></script>
+<script type="text/javascript">
+document.getElementById('thing').addEventListener('dblclick',function () {
+alert('Great Work, Move On To The Next Level!');
+})
+document.getElementById('wrongbutton').addEventListener('click',function () {
+alert('Hint: Click on the "button" above');
+})
+var user = document.getElementById('profile');
+var usersName = document.getElementById('username');
+var biggerScore = 0;
+function onSignIn(googleUser) {
+  var profile = googleUser.getBasicProfile();
+user.src =  googleUser.getBasicProfile().getImageUrl();
+document.getElementById('name').value = profile.getName();
+usersName.innerText = profile.getName();
+biggerScore++ ;
+}
+window.setInterval(function(){
+  document.getElementById('bigScore').innerText = 'Your Score Is: ' + biggerScore +'/5';
+
+}, 100);
+document.getElementById('namesub').addEventListener('click', function() {
+  if (document.getElementById('name').value === 'it' ) {
+alert('ok ur fine');
+biggerScore++ ;
+}else {
+  alert('Congrats you failed')
+}
+})
+//move game thinog
+function move()
+{
+ document.getElementById("buttonm").style.top= Math.random() *  60 + "px";
+ document.getElementById("buttonm").style.left= Math.random()  * 500 + "px";
+}
+var score = 0;
+function scoreadd() {
+score = score + 5;
+biggerScore++ ;
+}
+var wow = new WOW(
+  {
+    boxClass:     'wow',      // animated element css class (default is wow)
+    animateClass: 'animated', // animation css class (default is animated)
+    offset:       0,          // distance to the element when triggering the animation (default is 0)
+    mobile:       true,       // trigger animations on mobile devices (default is true)
+    live:         true,       // act on asynchronously loaded content (default is true)
+    callback:     function(box) {
+      // the callback is fired every time an animation is started
+      // the argument that is passed in is the DOM node being animated
+    },
+    scrollContainer: null // optional scroll container selector, otherwise use window
+  }
+);
+wow.init();
+ document.getElementById('scoreDis').innerText = 'Score:' + score;
+ document.getElementById('copy').addEventListener = ('onmouseover', function() {
+alert('grammer god')
+ })
+
+ document.getElementById('bigScore').innerText = 'Your Score Is: ' + biggerScore/1 * 100;
+
+</script>
+
+<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyD8gnqFOvPKhLiTiJfEIKV17pI0O5uRsPM",
+    authDomain: "128879950884-embr1ecv7uta9cthnan7bplv929i3ljk.apps.googleusercontent.com",
+    databaseURL: "https://psyched-upgrade-199123.firebaseio.com",
+    projectId: "psyched-upgrade-199123",
+    storageBucket: "psyched-upgrade-199123.appspot.com",
+    messagingSenderId: "128879950884"
+  };
+
+  firebase.initializeApp(config);
 </script>
 </html>
