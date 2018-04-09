@@ -48,6 +48,9 @@ transition: width 2s, height 4s;
   position: absolute;
   color: blue;
 }
+.btn{
+  border-radius: 20px;
+}
 
 </style>
 </head>
@@ -78,7 +81,7 @@ transition: width 2s, height 4s;
       <div class="card-body">
       <h4>  Level 2: </h4>
         <p>Click on the <span id="thing">button</span> two times</p>
-        <button type="button" name="button" id="wrongbutton">Click here</button>
+        <button type="button" class="btn btn-primary btn-md" id="wrongbutton">Click here</button>
       </div>
   </div>
   <br>
@@ -87,7 +90,7 @@ transition: width 2s, height 4s;
       <h4>  Level 3: </h4>
         <p>Whats your Name? Spell it!</p>
         <input type="text" value="" id="name">
-        <button type="button" name="button" id="namesub">Submit</button>
+        <button type="button" class="btn btn-primary btn-md" id="namesub">Submit</button>
       </div>
   </div>
   <br>
@@ -98,7 +101,7 @@ transition: width 2s, height 4s;
         <p>Click on the blue dot to get 5 points</p>
         <p id="scoreDis"> </p>
         <div class="canvassss">
-          <i class="fas fa-circle" onmouseover="move()" id="buttonm" onclick="scoreadd"></i>
+          <i class="fas fa-circle blue-text" onmouseover="move()" id="buttonm" onclick="scoreadd"></i>
         </div>
       </div>
   </div>
@@ -119,7 +122,7 @@ transition: width 2s, height 4s;
 
 </body>
 <!--Footer-->
-<footer class="page-footer font-small blue pt-4 mt-4">
+<footer class="page-footer font-small primary-color pt-4 mt-4">
 
     <!--Footer Links-->
     <div class="container-fluid text-center text-md-left">
